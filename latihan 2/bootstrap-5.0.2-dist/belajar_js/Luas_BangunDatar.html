@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <title>LUAS BANGUN DATAR</title>
+    <style>
+      body {
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+      }
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center; margin-top: 20px">Luas Bangun Datar</h1>
+    <div class="form-check form-switch" onclick="dark()">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+      <label class="form-check-label" for="flexSwitchCheckChecked">Dark/Light</label>
+    </div>
+    <br />
+    <div class="container">
+      <form class="row g-3">
+        <div class="col-auto">
+          <label for="persegi" class="visually-hidden">luas persegi</label>
+          <input type="text" readonly class="form-control-plaintext" id="persegi" value="LUAS PERSEGI" />
+        </div>
+        <div class="col-6">
+          <label for="inputPersegi" class="visually-hidden">Sisi</label>
+          <input type="number" class="form-control" id="inputPersegi" placeholder="Masukkan Sisi" />
+        </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-danger mb-3" onclick="luaspersegi()">Hitung</button>
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-light"><label id="hasilpersegi">Jawaban</label></button>
+        </div>
+      </form>
+      <hr />
+      <form class="row g-3">
+        <div class="col-auto">
+          <label for="persegipanjang" class="visually-hidden">luas persegi panjang</label>
+          <input type="text" readonly class="form-control-plaintext" id="persegipanjang" value="LUAS PERSEGI PANJANG" />
+        </div>
+        <div class="col-6">
+          <label for="inputPersegipanjang" class="visually-hidden">panjang</label>
+          <input type="number" class="form-control" id="inputPersegipanjang1" placeholder="Masukkan Panjang" /><br />
+          <input type="number" class="form-control" id="inputPersegipanjang2" placeholder="Masukkan Lebar" />
+        </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-dark mb-3" onclick="luaspersegipanjang()">Hitung</button>
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-light"><label id="hasilpersegipanjang">Jawaban</label></button>
+        </div>
+      </form>
+      <hr />
+      <form class="row g-3">
+        <div class="col-auto">
+          <label for="lingkaran" class="visually-hidden">lingkaran</label>
+          <input type="text" readonly class="form-control-plaintext" id="lingkaran" value="LINGKARAN" />
+        </div>
+        <div class="col-6">
+          <label for="inputLingkaran" class="visually-hidden">jari jari</label>
+          <input type="number" class="form-control" id="inputLingkaran" placeholder="Masukkan Jari-Jari" />
+        </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-success mb-3" onclick="luaslingkaran()">Hitung</button>
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-light"><label id="hasilLingkaran">Jawaban</label></button>
+        </div>
+      </form>
+      <hr />
+      <form class="row g-3">
+        <div class="col-auto">
+          <label for="segitiga" class="visually-hidden">segitiga</label>
+          <input type="text" readonly class="form-control-plaintext" id="segitiga" value="SEGITIGA" />
+        </div>
+        <div class="col-6">
+          <label for="inputSegitiga" class="visually-hidden">alas</label>
+          <input type="number" class="form-control" id="inputSegitiga1" placeholder="Masukkan Alas" /><br />
+          <input type="number" class="form-control" id="inputSegitiga2" placeholder="Masukkan Tinggi" />
+        </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-primary mb-3" onclick="luassegitiga()">Hitung</button>
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-light"><label id="hasilsegitiga">Jawaban</label></button>
+        </div>
+        <hr />
+      </form>
+      <br />
+    </div>
+
+    <script>
+      function luaspersegi() {
+        var sisi = parseInt(document.getElementById('inputPersegi').value);
+        var luas = sisi * sisi;
+        var hasil = document.getElementById('hasilpersegi');
+        hasil.innerHTML = luas;
+      }
+      function luaspersegipanjang() {
+        var panjang = parseInt(document.getElementById('inputPersegipanjang1').value);
+        var lebar = parseInt(document.getElementById('inputPersegipanjang2').value);
+        var luas = panjang * lebar;
+        var hasil = document.getElementById('hasilpersegipanjang');
+        hasil.innerHTML = luas;
+      }
+      function luaslingkaran() {
+        var jari = parseInt(document.getElementById('inputLingkaran').value);
+        var luas = Math.PI * Math.pow(jari, 2);
+        var hasilluas = document.getElementById('hasilLingkaran');
+        hasilluas.innerHTML = parseInt(luas);
+      }
+      function luassegitiga() {
+        var alas = parseInt(document.getElementById('inputSegitiga1').value);
+        var Tinggi = parseInt(document.getElementById('inputSegitiga2').value);
+        var luas = 0.5 * alas * Tinggi;
+        var hasil = document.getElementById('hasilsegitiga');
+        hasil.innerHTML = luas;
+      }
+      function dark() {
+        var element = document.body;
+        element.classList.toggle('dark-mode');
+      }
+    </script>
+    <!-- js -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  </body>
+</html>

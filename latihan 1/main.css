@@ -1,0 +1,82 @@
+.navigasi{
+    background-color: cyan;
+    color:black;
+    font-size: 30px;
+    font-family: monospace;
+    overflow:hidden;
+    list-style-type: none;
+    position: fixed;
+    width: 100%;
+    z-index: 100%;
+    top: 0px;
+    margin-top: 0px;
+}
+.navigasi li{
+    float:left;
+    margin: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    padding-right: 40px;
+    font-family: monospace;
+}
+.gambar1{
+    width: 200px;
+    height: 200px;
+    border-radius: 25%;
+    margin: 20px;
+}
+.text{
+    padding-top: 0px;
+    margin: 0px;
+}
+.nama{
+    padding-top: 0px;
+    margin: 0px;
+}   
+.pra1{
+    font-size: 25px;
+    font-family: monospace;
+}
+.list li{
+    font-size: 23px;
+    font-family: monospace;
+}
+#teks{
+    
+}
+.sosmed{
+    width: 3%;
+    height: 3%;
+    margin: 0px;
+    padding-top: 0px;
+}
+.gambar1:hover{
+    border: 10px solid blue;
+    width: 210px ;
+}
+.gambar{
+     width: 200px;
+    height: 200px;
+    border-radius: 200px;
+}
+body{
+    background-color: lightgreen;
+    color: mediumvioletred;
+}
+.navigasi li:hover{
+    background-color: white;
+}
+.navigasi a{
+    text-decoration: none;
+    color: black;
+}
+tr:hover{
+    color: black;
+    text-align: center;
+}
+.bapak: hover{
+    color: transparent;
+
+}
+
+

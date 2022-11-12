@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir</title>
+  </head>
+  <body>
+    <br />
+    <div class="mb-3">
+      <label id="nama" class="form-label">Nama</label>
+      <input type="text" class="form-control" placeholder="Masukkan Namamu" />
+    </div>
+    <br />
+    <div class="mb-3">
+      <label id="kelas" class="form-label">Kelas</label>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Kelas Berapakah Anda?</option>
+        <option value="1">XIRA</option>
+        <option value="2">XIRB</option>
+        <option value="3">XIRC</option>
+      </select>
+      <br /><br />
+      <div class="mb-3">
+        <label id="absen" class="form-label">No Absen</label>
+        <input type="number" class="form-control" placeholder="Masukkan No Absenmu" />
+      </div>
+      <div class="mb-3">
+        <label id="alamat" class="form-label">Alamat</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    </div>
+    <br />
+    <div class="mb-3">
+      <button type="button" class="btn btn-primary mb-3" onclick="data()">Submit</button>
+    </div>
+    <br />
+    <br />
+    <label for="">Nama : <label id="hasilnama"></label></label><br />
+    <label for="">Kelas : <label id="hasilkelas"></label></label><br />
+    <label for="">No Absen : <label id="hasilabsen"></label></label><br />
+    <label for="">Alamat : <label id="hasilalamat"></label></label><br />
+
+    <script>
+      function data() {
+        var nama = document.getElementById('nama').value;
+        var kelas = document.getElementById('kelas').value;
+        var absen = document.getElementById('absen').value;
+        var alamat = document.getElementById('alamat').value;
+        var hasilnama = document.getElementById('hasilnama');
+        var hasilkelas = document.getElementById('hasilkelas');
+        var hasilabsen = document.getElementById('hasilabsen');
+        var hasilalamat = document.getElementById('hasilalamat');
+        hasilnama.innerHTML = nama;
+        hasilkelas.innerHTML = kelas;
+        hasilabsen.innerHTML = absen;
+        hasilalamat.innerHTML = alamat;
+      }
+    </script>
+  </body>
+</html>
